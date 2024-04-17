@@ -1,31 +1,34 @@
+// condizioni iniziali
 const costo_km= 0.21;
 
 let km_passeggero= prompt("inserisci i km da effettuare")
 
 let eta_passeggero= prompt("inserisci l'età ")
 
-let costobiglietto= km_passeggero * costo_km;
+let costo_biglietto= km_passeggero * costo_km;
 
-let sconto_giovani=(costobiglietto) * 0.2;
+let costo_biglietto_arrotondato=costo_biglietto.toFixed(2);
 
-let sconto_matusa=(costobiglietto) * 0.4;
+let sconto_giovani=(costo_biglietto) * 0.2;
 
- //alert(costobiglietto);
+let sconto_matusa=(costo_biglietto) * 0.4;
+
+console.log(costo_biglietto_arrotondato);
 
 // scontistica età minori 
 
 if (eta_passeggero < 18){
     
-    let biglietto_giovani= costobiglietto - sconto_giovani +"€";
-    alert(biglietto_giovani);
-    console.log(biglietto_giovani);
+    let biglietto_giovani= costo_biglietto - sconto_giovani /*+ €*/;
+    let biglietto_giovani_arrotondato= biglietto_giovani.toFixed(2);
+    alert(biglietto_giovani_arrotondato);
+    console.log(biglietto_giovani_arrotondato);
 
 }
 
 if(eta_passeggero > 65){
-    let biglietto_matusa=costobiglietto - sconto_matusa +"€";
+    let biglietto_matusa=costo_biglietto - sconto_matusa +"€";
     alert(biglietto_matusa);
     console.log(biglietto_matusa);
 }
 
-console.log(costobiglietto);
