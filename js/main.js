@@ -16,11 +16,16 @@ let sconto_matusa=(costobiglietto) * 0.4;
 
 if (eta_passeggero < 18){
     
-    let bigliettogiovani= costobiglietto - sconto_giovani +"€";
-    alert(bigliettogiovani);
+    let biglietto_giovani= costobiglietto - sconto_giovani +"€";
+    alert(biglietto_giovani);
+    console.log(biglietto_giovani);
+
 }
 
 if(eta_passeggero > 65){
     let biglietto_matusa=costobiglietto - sconto_matusa +"€";
     alert(biglietto_matusa);
+    console.log(biglietto_matusa);
 }
+
+console.log(costobiglietto);
